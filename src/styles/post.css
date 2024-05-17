@@ -22,7 +22,7 @@
 }
 
 .post h1 {
-  @apply text-orange-500;
+  @apply text-orange-500 leading-8 md:leading-none;
 }
 
 .post h2 {
