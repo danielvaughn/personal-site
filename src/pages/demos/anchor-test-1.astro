@@ -1,0 +1,41 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Anchor Test 1</title>
+  <style>
+
+    main {
+      min-height: 100vh;
+      background-color: #fafafa;
+    }
+
+    .box {
+      width: 100px;
+      height: 100px;
+    }
+
+    .red {
+      background-color: red;
+      position: relative;
+      anchor-name: --red;
+    }
+
+    .blue {
+      background-color: blue;
+      position: absolute;
+      top: anchor(--red bottom);
+      left: anchor(--red right);
+    }
+
+  </style>
+</head>
+<body>
+  <main>
+    <div class="box red"></div>
+    <div class="box blue"></div>
+  </main>
+</body>
+</html>

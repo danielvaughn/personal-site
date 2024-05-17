@@ -1,0 +1,54 @@
+---
+import Header from "../components/Header.astro";
+import BlurCircle from "@/components/shared/BlurCircle.astro";
+import theme from "@/data/theme";
+import SEOTags from "@/components/seo/SEOTags.astro";
+import type { HeadTags } from "@/utils/types/HeadTags";
+
+import "@/styles/tailwind.css";
+import "@/styles/base.css";
+import "@/styles/post.css";
+
+import presentation from "@/data/presentation";
+import SocialLinks from "@/components/SocialLinks.astro";
+import Link from "@/components/shared/Link.astro";
+
+export type Props = HeadTags;
+
+const headTags = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <SEOTags {...headTags} />
+  <body class="min-h-screen bg-neutral-50 text-sm text-neutral-600 hero-bg px-1">
+    <!-- <div class="h-36 bg-white w-screen font-black text-8xl leading-none tracking-wide clip-text">
+      DANIEL VAUGHN
+    </div> -->
+    <div class="bg-white py-2 px-10 max-w-[968px] my-1 mx-auto overflow-hidden">
+      <h1 class="font-black text-4xl md:text-8xl whitespace-nowrap leading-none block tracking-wide site-title clip-text bg">
+        <a href="/">DANIEL VAUGHN</a>
+      </h1>
+    </div>
+    <div class="mx-auto flex max-w-[968px] px-10 py-8 flex-col gap-9 md:gap-20 md:py-10 bg-white">
+      <Header />
+      <BlurCircle position="top" color={theme.colors.blur.top} />
+      <BlurCircle position="bottom" color={theme.colors.blur.bottom} />
+      <slot />
+  
+      <footer class="flex flex-col gap-8">
+        <div class="flex w-full flex-row justify-between gap-2">
+          <h3 class="text-lg text-neutral-900">Get in touch</h3>
+        </div>
+        <p>
+          Email me at <Link
+            href={`mailto:${presentation.mail}`}
+            label={presentation.mail}
+          /> or follow me via my social links.
+        </p>
+  
+        <SocialLinks />
+      </footer>
+    </div>
+  </body>
+</html>

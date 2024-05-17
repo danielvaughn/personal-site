@@ -1,0 +1,44 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Anchor Test 1</title>
+  <style>
+
+    .one,
+    .two {
+      position: absolute;
+    }
+
+    .one {
+      anchor-name: --one;
+      background: red;
+      top: 10px;
+      left: 10px;
+    }
+
+    .two {
+      anchor-name: --two;
+      top: 10px;
+      right: 10px;
+      background: blue;
+    }
+
+    .purple {
+      position: absolute;
+      top: 10px;
+      left: anchor(--one right);
+      right: anchor(--two left);
+      background: purple;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="one">one</div>
+  <div class="two">two</div>
+  <div class="purple">I am purple to two elements</div>
+</body>
+</html>

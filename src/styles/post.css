@@ -1,0 +1,74 @@
+.post {
+  @apply text-base text-neutral-800;
+}
+
+.post .codeframe {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border: 2px solid #2e3440ff;
+}
+
+.post .codeframe iframe {
+  width: 100%;
+  height: 100%;
+}
+
+.post sub {
+  @apply text-neutral-500;
+}
+
+.post p {
+  @apply leading-6;
+}
+
+.post h1 {
+  @apply text-orange-500;
+}
+
+.post h2 {
+  @apply mt-6 text-3xl text-neutral-900;
+}
+
+.post h3 {
+  @apply mt-4 text-xl text-neutral-900;
+}
+
+.post code {
+  @apply rounded-sm bg-neutral-800 px-1 py-[2px] text-teal-500;
+}
+
+.post a {
+  @apply text-neutral-900 underline;
+}
+
+.post ul, .post ol {
+  @apply marker:text-orange-500;
+}
+
+.post ul {
+  @apply list-disc;
+}
+
+.post ol {
+  @apply list-decimal;
+}
+
+.post li {
+  @apply leading-6;
+}
+
+.post b, .post strong {
+  @apply text-neutral-700;
+}
+
+.post blockquote {
+  @apply flex flex-row gap-2 before:block before:h-auto before:w-1 before:max-w-[1px] before:bg-red-400 before:content-[''];
+}
+
+.post pre {
+  @apply p-4;
+}
+
+.post pre > code {
+  @apply bg-transparent;
+}
