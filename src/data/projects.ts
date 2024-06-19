@@ -9,7 +9,7 @@ const projects: Project[] = [
   {
     title: "Matry",
     techs: ["C", "JavaScript", "Rust"],
-    link: "https://github.com/matry/tree-sitter-matry",
+    link: "https://github.com/matry",
   },
   {
     title: "Stride",

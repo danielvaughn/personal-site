@@ -17,52 +17,40 @@ const posts = (await getCollection("posts")).sort(function (first, second) {
 ---
 
 <Layout>
-  <main class="flex flex-col gap-20">
+  <main class="flex flex-col gap-14 text-neutral-950">
     <article
-      class="flex flex-col gap-8 md:flex-row-reverse md:justify-end md:gap-12"
+      class="flex flex-col md:flex-row-reverse md:justify-end"
     >
-      {
-        presentation.profile && (
-          <Image
-            src={presentation.profile}
-            class="w-1/4 self-center rounded-full"
-            alt="Your Profile"
-            width="200"
-            height="200"
-          />
-        )
-      }
 
-      <div class="flex flex-col gap-5">
-        <h2 class="text-3xl text-neutral-900">
+      <div class="flex flex-col gap-4">
+        <h2 class="text-3xl">
           {presentation.title}
         </h2>
 
         <p
-          class="w-auto max-w-[60ch] leading-6"
+          class="w-auto max-w-[60ch] leading-5"
         >
-          I'm Daniel Vaughn, a <strong class="text-orange-500 font-semibold">floridian fullstack engineer</strong> with about <strong class="text-orange-500 font-semibold">10 years</strong> of web experience.
+          I'm Daniel Vaughn, a <strong class="text-orange-500 font-semibold">floridian fullstack engineer</strong> with a little  over <strong class="text-orange-500 font-semibold">10 years</strong> of web experience.
         </p>
 
         <p
-          class="w-auto max-w-[60ch] leading-6"
+          class="w-auto max-w-[60ch] leading-5"
         >
           Currently, I'm building developer tools for NextEra Mobility, a mission-driven company paving the way for EV adoption on a commercial scale.
         </p>
 
         <p
-          class="w-auto max-w-[60ch] leading-6"
+          class="w-auto max-w-[60ch] leading-5"
         >
           Outside of work, I am exploring the boundaries between design and engineering,
           most notably with a programming language for UI designers called <strong class="text-orange-500 font-semibold">Matry</strong>.
           Check out my projects below to see what else I'm working on.
         </p>
 
-        <SocialLinks />
       </div>
     </article>
 
-    <article class="flex flex-col gap-8">
+    <!-- <article class="flex flex-col gap-8">
       <header class="flex w-full flex-row justify-between gap-2">
         <h3 class="text-lg text-neutral-900">Latest posts</h3>
         <Link href="/posts" label="See all posts" isUnderline target="_self" />
@@ -84,7 +72,7 @@ const posts = (await getCollection("posts")).sort(function (first, second) {
               ))
         }
       </section>
-    </article>
+    </article> -->
 
     <article class="flex flex-col gap-8">
       <header class="flex w-full flex-row justify-between gap-2">
