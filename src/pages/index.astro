@@ -1,6 +1,6 @@
 ---
 import { getCollection } from "astro:content";
-import { Image } from "astro:assets"
+import { Image } from "astro:assets";
 
 import Layout from "@/layouts/Layout.astro";
 import SocialLinks from "@/components/SocialLinks.astro";
@@ -18,35 +18,34 @@ const posts = (await getCollection("posts")).sort(function (first, second) {
 
 <Layout>
   <main class="flex flex-col gap-14 text-neutral-950">
-    <article
-      class="flex flex-col md:flex-row-reverse md:justify-end"
-    >
-
+    <article class="flex flex-col md:flex-row-reverse md:justify-end">
       <div class="flex flex-col gap-4">
         <h2 class="text-3xl">
           {presentation.title}
         </h2>
 
-        <p
-          class="w-auto max-w-[60ch] leading-5"
-        >
-          I'm Daniel Vaughn, a <strong class="text-orange-500 font-semibold">floridian fullstack engineer</strong> with a little  over <strong class="text-orange-500 font-semibold">10 years</strong> of web experience.
+        <p class="w-auto max-w-[60ch] leading-5">
+          I'm Daniel Vaughn, a <strong class="font-semibold text-orange-500"
+            >floridian design engineer</strong
+          > with around <strong class="font-semibold text-orange-500"
+            >12-15 years</strong
+          > of web experience.
         </p>
 
-        <p
-          class="w-auto max-w-[60ch] leading-5"
-        >
-          Currently, I'm building developer tools for NextEra Mobility, a mission-driven company paving the way for EV adoption on a commercial scale.
+        <p class="w-auto max-w-[60ch] leading-5">
+          Currently, I'm Head of UX at <a
+            href="https://dreadnode.io/"
+            target="_blank"
+            class="font-semibold text-orange-500 underline">Dreadnode</a
+          >, a pirate-themed company building AI tooling for hackers.
         </p>
 
-        <p
-          class="w-auto max-w-[60ch] leading-5"
-        >
-          Outside of work, I am exploring the boundaries between design and engineering,
-          most notably with a programming language for UI designers called <strong class="text-orange-500 font-semibold">Matry</strong>.
-          Check out my projects below to see what else I'm working on.
+        <p class="w-auto max-w-[60ch] leading-5">
+          Outside of work I'm building <strong
+            class="font-semibold text-orange-500">Matry</strong
+          >, a browser for designers. Check out my projects below to see what
+          else I'm working on.
         </p>
-
       </div>
     </article>
 
